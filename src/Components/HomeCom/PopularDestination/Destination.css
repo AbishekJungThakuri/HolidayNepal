@@ -1,0 +1,68 @@
+/* css for Destination.jsx */
+.destination{
+    background-color: #f5f5f5;
+    padding:33px;
+    border-radius: 55px;
+    margin-bottom: 50px;
+}
+.destination .title{
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 50px;
+}
+.underline{
+    text-decoration: underline #fc8019 ;
+}
+.dest-arrow{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 50px;
+    color:  #fc8019;
+    margin-right: 30px;
+    cursor: pointer;
+}
+.dest-container{
+    width: 95%;
+    display: flex;
+    overflow-x: hidden;
+    gap: 20px;
+   
+}
+
+/* css for Eachplace.jsx */
+
+.place{
+    height: 308px;
+    width: 265px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.place img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.each-place h1{
+    font-size: 20px;
+    font-weight: bold;
+    color: #5c5c5c;
+    margin-top: 20px;
+}
+.price-rating{
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+}
+.price-rating p{
+    color: #5c5c5c;
+    margin-top: 10px;
+}
+.star-i{
+    color: #FDC107;
+    margin-left: 30px;
+    margin-right: 20px;
+}
+
+ 

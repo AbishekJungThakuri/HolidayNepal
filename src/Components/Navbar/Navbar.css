@@ -1,0 +1,66 @@
+:root {
+    --orange: #fc8019;
+    --dark-gray: #505050;
+  }
+
+  .nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 80px;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+  }
+  
+  .left-nav p, .right-nav ul {
+    font-size: 28px;
+    color: var(--dark-gray);
+  }
+  
+  .left-nav p span {
+    color: var(--orange);
+    font-weight: 800;
+  }
+  
+  .right-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    cursor: pointer;
+    padding: 0; 
+  }
+
+  .event {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .cmmt-icon {
+    color: var(--orange);
+  }
+  
+  .loginIn-btn {
+    padding: 0px 30px;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 50px;
+    background-color: var(--orange);
+    color: white;
+    cursor: pointer;
+  }
+  
+  .active {
+    background-color: var(--orange);
+    color: white;
+    padding: 0 20px;
+    border-radius: 50px;
+  }
+  .list{
+    color: #505050;
+  }
+  .active .cmmt-icon {
+    color: white;
+  }
+  

@@ -1,0 +1,83 @@
+.mountain-img{
+    background-image: url(../../assets/places-hero-image.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 402px;
+    position: relative;
+}
+.mountain-img h1{
+    font-size: 55px;
+    position: absolute;
+    top: 195px;
+    left: 132px;
+    font-weight: bold;
+    color: white;
+    line-height: 0.9;
+    letter-spacing: 4px;
+}
+.with{
+    font-size: 25px;
+    font-weight: 100;
+}
+.holiday-nepal{
+    font-size: 40px;
+    font-weight: 600;
+}
+.nepal{
+    color: #fc8019;
+}
+.sort-places{
+    padding: 5px 132px;
+}
+.sort-places h1{
+    font-size: 40px;
+    font-weight: 600;
+    color: #5c5c5c;
+    margin-bottom: 15px;
+}
+.sort-places p{
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+.selectby{
+    width: 267px;
+    height: 41px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    padding-left: 20px;
+    background-color: white;
+    border: 1px solid black;
+}
+
+/* Css for PlaceLayout.jsx */
+.place-layout{
+    display: flex;
+    gap: 15px;
+    padding: 5px 132px;
+}
+.place-imag{
+    width: 267px;
+    height: 170px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.place-imag img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.name-heart h1{
+   font-size: 25PX;
+   font-weight: 600;
+   color:#5c5c5c ;
+}
+.place-info p{
+    font-size: 20px;
+    color:#5c5c5c ;
+}
+.star-rating{
+    display: flex;
+}
