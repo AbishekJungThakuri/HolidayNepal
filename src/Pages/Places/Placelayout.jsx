@@ -1,19 +1,21 @@
 import React from 'react'
 import './Place.css'
-import pkr from '../../assets/pokhara.jpg'
 import { FaStar } from "react-icons/fa";
+import { IoHeartCircle } from "react-icons/io5";
 
-export const Placelayout = () => {
+
+export const Placelayout = ({name,price,rating,img}) => {
   return (
     <div className='place-layout'>
         <div className="place-imag">
-            <img src={pkr} alt="" />
+            <img src={img} alt="" />
         </div>
         <div className="place-info">
             <div className='name-heart' >
-            <h1>Pokhara</h1>
+               <h1> {name} </h1>
+               <IoHeartCircle className='heart' />
             </div>
-            <p>$550 starting</p>
+            <p>${price} starting</p>
             <div className="star-rating">
             <FaStar className='star' />
             <p>4.7</p>

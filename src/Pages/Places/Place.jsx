@@ -1,6 +1,7 @@
 import React from 'react'
 import './Place.css'
 import { Placelayout } from './Placelayout'
+import destinations from '../../assets/Data/populardestination';
 
 export const Place = () => {
   return (
@@ -21,7 +22,18 @@ export const Place = () => {
         <div className='place-list'> 
         </div>
       </div>
-            <Placelayout/>
+      <div className="places-loadmore">
+          <div className="places">
+           {
+            destinations.map((place)=>(
+            <div key={place.id}>
+            <Placelayout name={place.name} img={place.image} rating={place.rating} price={place.price}  />
+            </div>
+            ))
+          }
+         </div>
+         <button className="load-more">Load more</button>
+      </div>
     </div>
   )
 }
