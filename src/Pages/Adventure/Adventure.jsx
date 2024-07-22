@@ -1,5 +1,5 @@
 import React from 'react';
-import adventure_hero from '../../assets/adventure-hero-image.jpg'
+import adventure_hero from '../../assets/images/adventure-hero-image.jpg'
 import './Adventure.css'
 import { Category } from '../../Components/Category/Category';
 

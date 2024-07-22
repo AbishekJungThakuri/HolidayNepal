@@ -1,12 +1,12 @@
 import React from 'react';
 import './Feature.css';
 import { SingleBox } from './SingleBox';
-import shine from '../../../assets/shines.png';
-import booking from '../../../assets/booking.png';
-import destination from '../../../assets/destination.png';
-import tasks from '../../../assets/tasks.png';
-import best_price from '../../../assets/best-price.png';
-import budgeting from '../../../assets/budgeting.png';
+import shine from '../../../assets/images/shines.png';
+import booking from '../../../assets/images/booking.png';
+import destination from '../../../assets/images/destination.png';
+import tasks from '../../../assets/images/tasks.png';
+import best_price from '../../../assets/images/best-price.png';
+import budgeting from '../../../assets/images/budgeting.png';
 
 
 export const Feature = () => {
