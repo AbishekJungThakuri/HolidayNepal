@@ -15,7 +15,7 @@ export const Destination = () => {
         <div className='dest-wrapper'>
            <div className='dest-container'>
             {
-                destinations.filter((place) => place.id < 5).map((place) => (
+                destinations.map((place) => (
                     <div key={place.id}>
                         <EachPlace name={place.name} img={place.image} rating={place.rating} price={place.price} />
                     </div>

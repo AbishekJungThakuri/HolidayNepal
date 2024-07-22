@@ -29,10 +29,9 @@
 .dest-container{
     width: 80vw;
     height: 70vh;
-    overflow-x: hidden; 
+    overflow-x: scroll; 
     padding: 5px;
     display: flex;
-    overflow-x: hidden;
     gap: 20px;
    
 }
