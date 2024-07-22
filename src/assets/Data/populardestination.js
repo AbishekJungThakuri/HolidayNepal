@@ -11,12 +11,11 @@ import bungee from '../../assets/bungee.jpeg'
 import mountering from '../../assets/mountering.jpg'
 import jungle_safari from '../../assets/jungle-safari.jpg'
 import dashain from '../../assets/dashain.jpg'
-import bisket from '../../assets/Bisket_Jatra_Vibes.jpg'
+import bisket from '../../assets/Bisket.jpg'
 import teej from '../../assets/teej.jpg'
 import tihar from '../../assets/tihar.jpg'
 import indra_Jatra from '../../assets/indra-Jatra.jpg'
 import holi from '../../assets/holi.jpg'
-
 
 
 let destinations = [
