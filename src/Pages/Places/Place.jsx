@@ -2,7 +2,6 @@ import React from 'react'
 import { Category } from '../../Components/Category/Category'
 import './Place.css'
 
-
 export const Place = () => {
   return (
     <div>

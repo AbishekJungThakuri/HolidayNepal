@@ -1,24 +1,4 @@
-<<<<<<< HEAD
-import ktm from '../../assets/ktm.jpg'
-import pkr from '../../assets/pokhara.jpg'
-import lumbini from '../../assets/lumbini.avif'
-import chitwan from '../../assets/cnp.jpg'
-import annupurna from '../../assets/abc.jpg'
-import everest from '../../assets/006-EBC.jpg'
-import trekking from '../../assets/trekking.jpg'
-import paragliding from '../../assets/paragliding.webp'
-import rafting from '../../assets/rafting-nepal.jpg'
-import bungee from '../../assets/bungee.jpeg'
-import mountering from '../../assets/mountering.jpg'
-import jungle_safari from '../../assets/jungle-safari.jpg'
-import dashain from '../../assets/dashain.jpg'
-import bisket from '../../assets/Bisket.jpg'
-import teej from '../../assets/teej.jpg'
-import tihar from '../../assets/tihar.jpg'
-import indra_Jatra from '../../assets/indra-Jatra.jpg'
-import holi from '../../assets/holi.jpg'
 
-=======
 import ktm from '../../assets/images/ktm.jpg'
 import pkr from '../../assets/images/pokhara.jpg'
 import lumbini from '../../assets/images/lumbini.avif'
@@ -37,7 +17,7 @@ import teej from '../../assets/images/teej.jpg'
 import tihar from '../../assets/images/tihar.jpg'
 import indra_Jatra from '../../assets/images/indra-Jatra.jpg'
 import holi from '../../assets/images/holi.jpg'
->>>>>>> f02a2ea8d6fd4dee9d8897578fc9827ec5df1604
+// >>>>>>> f02a2ea8d6fd4dee9d8897578fc9827ec5df1604
 
 let destinations = [
 {
