@@ -1,5 +1,5 @@
 import React from 'react'
-import './Place.css'
+import './Placelayout.css'
 import { FaStar } from "react-icons/fa";
 import { IoHeartCircle } from "react-icons/io5";
 
@@ -18,7 +18,7 @@ export const Placelayout = ({name,price,rating,img}) => {
             <p>${price} starting</p>
             <div className="star-rating">
             <FaStar className='star' />
-            <p>4.7</p>
+            <p>{rating}</p>
             </div>
             <button className='readmore'>read more</button>
         </div>

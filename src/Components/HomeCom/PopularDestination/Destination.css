@@ -25,9 +25,8 @@
 .dest-container{
     width: 95%;
     display: flex;
-    overflow-x: hidden;
-    gap: 20px;
-   
+    overflow-x: scroll;
+    gap: 20px; 
 }
 
 /* css for Eachplace.jsx */

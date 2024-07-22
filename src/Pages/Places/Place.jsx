@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './Place.css'
-import { Placelayout } from './Placelayout'
-import destinations from '../../assets/Data/populardestination';
+import { Placelayout } from '../../Components/PlaceLayoutPages/Placelayout';
+import { storeContext } from '../../Context/StoreContext';
+
 
 export const Place = () => {
+
+   const {destinations} = useContext(storeContext);
+  
   return (
     <div className='place-container'>
       <div className='mountain-img'>
