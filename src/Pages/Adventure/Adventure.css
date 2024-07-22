@@ -1,23 +1,28 @@
-
-.mountain-img{
-    background-image: url(../../assets/places-hero-image.jpg);
+.adventure-img{
+    background-image: url(../../assets/adventure-hero-image.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     height: 402px;
     position: relative;
 }
-.mountain-img h1{
+.adventure-img h1{
     font-size: 55px;
     position: absolute;
     top: 195px;
     left: 132px;
     font-weight: bold;
-    color: white;
     line-height: 0.9;
     letter-spacing: 4px;
 }
-.the{
+.with{
     font-size: 25px;
     font-weight: 100;
+}
+.holiday-nepal{
+    font-size: 40px;
+    font-weight: 600;
+}
+.nepal{
+    color: #fc8019;
 }

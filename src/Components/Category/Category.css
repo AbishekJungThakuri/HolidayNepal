@@ -1,0 +1,24 @@
+.sort-places{
+    padding: 5px 132px;
+}
+.sort-places h1{
+    font-size: 40px;
+    font-weight: 600;
+    color: #5c5c5c;
+    margin-bottom: 15px;
+}
+.sort-places p{
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+.selectby{
+    width: 267px;
+    height: 41px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    padding-left: 20px;
+    background-color: white;
+    border: 1px solid black;
+}

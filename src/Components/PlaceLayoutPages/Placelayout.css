@@ -1,3 +1,5 @@
+@import url("../../themes.css");
+
 .place-layout{
     display: flex;
     gap: 15px;
@@ -23,7 +25,7 @@
 }
 .heart{
     font-size: 40px;
-    color: #FC8019;
+    fill: var(--primary-color);
 }
 .name-heart h1{
    font-size: 25PX;
@@ -40,7 +42,7 @@
 }
 .star{
     font-size: 20px;
-    color: #FDC107;
+    fill: var(--star-color);
 }
 .readmore{
     font-size: 14px;
@@ -70,4 +72,5 @@
     background-color: white;
     cursor: pointer;
     margin-top: 40px;
+    margin-bottom: 100px;
 }
