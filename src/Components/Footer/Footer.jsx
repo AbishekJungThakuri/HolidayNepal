@@ -15,13 +15,12 @@ export const Footer = () => {
           <FaInstagram />
           <FaYoutube />
       </div>
-      <div className="lists">
-        <ul>
+        <ul className="lists">
           <li>About Us</li>
+          <li>Contact Us</li>
           <li>Terms of Service</li>
           <li>Refund Policy</li>
         </ul>
-      </div>
       <div className="details">
         <p>"HolidayNepal is your premier platform for exploring Nepal s wonders with confidence. Offering AI-driven itineraries, seamless bookings, and expert local insights, we re dedicated to crafting personalized journeys that redefine travel experiences in Nepal."</p>
       </div>

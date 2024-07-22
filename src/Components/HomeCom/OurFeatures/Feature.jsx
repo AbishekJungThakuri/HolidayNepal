@@ -27,7 +27,7 @@ export const Feature = () => {
   return (
     <>
     <div className='feature'>
-        <h1>Our Features</h1>
+        <h1>Our <span>Features</span></h1>
         <div className="boxes">
             <SingleBox image={shine} topic={topic1} desc={desc1}/>
             <SingleBox image={booking} topic={topic2} desc={desc2}/>
@@ -48,8 +48,8 @@ export const Feature = () => {
         <p>Our customer love us ! With a 95% satisfaction rates, we pride ourselves on providing exceptional service.</p>
       </div>
       <div className="visited">
-        <h1>200</h1>
-        <p>Explore Nepal with us ! We offer travel packages to over 200 destination inside Nepal giving you a wide range of options.</p>
+        <h1>100</h1>
+        <p>Explore Nepal with us ! We offer travel packages to over 100 destination inside Nepal giving you a wide range of options.</p>
       </div>
     </div>
     </>

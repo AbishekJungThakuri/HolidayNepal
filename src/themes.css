@@ -1,0 +1,21 @@
+:root {
+    --primary-color: #fc8019;
+    --primary-color-hover: #ff7000;
+    --text-color-highlight: #000;
+    --text-color: #4e4e4e;
+    --text-color-invert: #fff;
+    --bg-color: #fff;
+    --bg-color-sec: #eee;
+    --bg-color-ter: #ddd;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    transition: 0.2s ease-in-out;
+    box-sizing: border-box;
+    font-weight: 600;
+    outline:none;
+}

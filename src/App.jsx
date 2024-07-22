@@ -7,6 +7,8 @@ import { Packages } from "./Pages/Package/Packages"
 import { Event } from "./Pages/Events/Event"
 import { Footer } from "./Components/Footer/Footer"
 
+import './themes.css'
+
 function App() {
  
 

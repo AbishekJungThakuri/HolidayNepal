@@ -9,17 +9,17 @@ export const Destination = () => {
   return (
     <div className='destination'>
         <h1 className='title' >Popular <span className='underline'>Destinations</span> </h1>
-        <div className='dest-arrow'>
+        <div className='dest-wrapper'>
            <div className='dest-container'>
             {
                 destinations.filter((place) => place.id < 5).map((place) => (
-                    <div key={place.id}>
-                        <EachPlace name={place.name} img={place.image} rating={place.rating} price={place.price} />
-                    </div>
+                    
+                  <EachPlace name={place.name} img={place.image} rating={place.rating} price={place.price} />
+                    
                 ))
             }
           </div>
-        <FaCircleArrowRight />
+        <FaCircleArrowRight className='arrow'/>
         </div>
     </div>
   )

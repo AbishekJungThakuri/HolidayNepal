@@ -48,6 +48,20 @@ let destinations = [
     image:everest,
     rating:'4.8'
 },
+{
+    id:7,
+    name:'Everest.B.C',
+    price:5500,
+    image:everest,
+    rating:'4.8'
+},
+{
+    id:8,
+    name:'Everest.B.C',
+    price:5500,
+    image:everest,
+    rating:'4.8'
+},
 ]
 
 export default destinations
