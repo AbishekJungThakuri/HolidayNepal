@@ -1,32 +1,22 @@
-<<<<<<< HEAD
-import ktm from '../../assets/ktm.jpg'
-import pkr from '../../assets/pokhara.jpg'
-import lumbini from '../../assets/lumbini.avif'
-import chitwan from '../../assets/cnp.jpg'
-import annupurna from '../../assets/abc.jpg'
-import everest from '../../assets/006-EBC.jpg'
-import trekking from '../../assets/trekking.jpg'
-import paragliding from '../../assets/paragliding.webp'
-import rafting from '../../assets/rafting-nepal.jpg'
-import bungee from '../../assets/bungee.jpeg'
-import mountering from '../../assets/mountering.jpg'
-import jungle_safari from '../../assets/jungle-safari.jpg'
-import dashain from '../../assets/dashain.jpg'
-import bisket from '../../assets/Bisket_Jatra_Vibes.jpg'
-import teej from '../../assets/teej.jpg'
-import tihar from '../../assets/tihar.jpg'
-import indra_Jatra from '../../assets/indra-Jatra.jpg'
-import holi from '../../assets/holi.jpg'
-
-
-=======
 import ktm from '../../assets/images/ktm.jpg'
 import pkr from '../../assets/images/pokhara.jpg'
 import lumbini from '../../assets/images/lumbini.avif'
 import chitwan from '../../assets/images/cnp.jpg'
 import annupurna from '../../assets/images/abc.jpg'
 import everest from '../../assets/images/006-EBC.jpg'
->>>>>>> c1148da (Backend added)
+import trekking from '../../assets/images/trekking.jpg'
+import paragliding from '../../assets/images/paragliding.webp'
+import rafting from '../../assets/images/rafting-nepal.jpg'
+import bungee from '../../assets/images/bungee.jpeg'
+import mountering from '../../assets/images/mountering.jpg'
+import jungle_safari from '../../assets/images/jungle-safari.jpg'
+import dashain from '../../assets/images/dashain.jpg'
+import bisket from '../../assets/images/Bisket_Jatra_VIbes.jpg'
+import teej from '../../assets/images/teej.jpg'
+import tihar from '../../assets/images/tihar.jpg'
+import indra_Jatra from '../../assets/images/indra-Jatra.jpg'
+import holi from '../../assets/images/holi.jpg'
+
 
 let destinations = [
 {

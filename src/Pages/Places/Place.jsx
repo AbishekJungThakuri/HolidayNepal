@@ -1,6 +1,6 @@
 import React from 'react'
 import { Category } from '../../Components/Category/Category'
-import './PLace.css'
+import './Place.css'
 
 
 export const Place = () => {
