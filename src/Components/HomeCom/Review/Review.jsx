@@ -1,8 +1,8 @@
 import React from "react";
 import "./Review.css";
 import { FaStar } from "react-icons/fa";
-import inverted_comma from "../../../assets/InvertedComma.png";
-import girl from "../../../assets/girl.jpg";
+import inverted_comma from "../../../assets/images/InvertedComma.png";
+import girl from "../../../assets/images/girl.jpg";
 import { FaCircleArrowRight } from "react-icons/fa6";
 import { FaCircleArrowLeft } from "react-icons/fa6";
 

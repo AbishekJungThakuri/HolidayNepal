@@ -1,0 +1,6 @@
+flask
+flask_bcrypt
+flask_cors
+models
+pandas
+openpyxl

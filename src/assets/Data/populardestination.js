@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import ktm from '../../assets/ktm.jpg'
 import pkr from '../../assets/pokhara.jpg'
 import lumbini from '../../assets/lumbini.avif'
@@ -18,6 +19,14 @@ import indra_Jatra from '../../assets/indra-Jatra.jpg'
 import holi from '../../assets/holi.jpg'
 
 
+=======
+import ktm from '../../assets/images/ktm.jpg'
+import pkr from '../../assets/images/pokhara.jpg'
+import lumbini from '../../assets/images/lumbini.avif'
+import chitwan from '../../assets/images/cnp.jpg'
+import annupurna from '../../assets/images/abc.jpg'
+import everest from '../../assets/images/006-EBC.jpg'
+>>>>>>> c1148da (Backend added)
 
 let destinations = [
 {
