@@ -1,5 +1,6 @@
 import React from 'react'
 import './Main.css'
+import { IoSparkles } from "react-icons/io5";
 
 export const Main = () => {
   return (
@@ -8,10 +9,10 @@ export const Main = () => {
             <div className="text">
                 <p>Your Best Guide</p>
                 <h1>To <span className='un-line'>Travel</span> <br />Nepal </h1>
-                <p>Discover Nepal like never before HolidayNepal <br />Your ultimate travel companion for unforgettable adventures.</p>
+                <p>Discover Nepal like never before with HolidayNepal <br />Your ultimate travel companion for unforgettable adventures.</p>
             </div>
              <div className='btn'>
-                <p>Create Trip with AI</p>
+                <IoSparkles className='sparkle-icon' /> Create Trip with AI
              </div>
          </div>
          <div className="right">

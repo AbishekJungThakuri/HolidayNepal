@@ -26,7 +26,7 @@ export const Contact = () => {
     <div className='contact'>
       <div className='contact-left'>
         <h1>Have Any <br /> Questions ?</h1>
-        <p>Have questions? Fill out the form beside to ask any queries. Check out our FAQs in the Support section for quick answers.</p>
+        <p>Fill out the form beside to ask any queries. Check out our FAQs in the Support section for quick answers.</p>
       </div>
        <form onSubmit={onSubmit} className="contact-right">
            <div className="username">
