@@ -8,6 +8,16 @@ export const Category = (props) => {
 
   return (
     <div className="place-container">
+      <div className="pamplet">
+        <div className="pamplet-img">
+          <img className='hero' src={props.image} alt="" />
+        </div>
+        <h1>
+        {props.Utext} <br />
+        {props.Ltext}
+        </h1>
+      </div>
+     
 
       <div className="sort-places">
         <h1>Destinations</h1>
@@ -28,6 +38,7 @@ export const Category = (props) => {
                 img={place.image}
                 rating={place.rating}
                 price={place.price}
+                type={place.type}
               />
             </div>: null
           ))}

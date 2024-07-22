@@ -1,3 +1,24 @@
+.pamplet-img{
+    height: 402px;
+    width: 100%;
+    position: relative;
+}
+.hero{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.pamplet h1{
+    font-size: 55px;
+    position: absolute;
+    top: 195px;
+    left: 132px;
+    font-weight: bold;
+    line-height: 0.9;
+    letter-spacing: 4px;
+}
+
+
 .sort-places{
     padding: 5px 132px;
 }

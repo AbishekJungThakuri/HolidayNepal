@@ -4,7 +4,7 @@ import { FaStar } from "react-icons/fa";
 import { IoHeartCircle } from "react-icons/io5";
 
 
-export const Placelayout = ({name,price,rating,img}) => {
+export const Placelayout = ({name,price,rating,img,type}) => {
   return (
     <div className='place-layout'>
         <div className="place-imag">
@@ -15,7 +15,10 @@ export const Placelayout = ({name,price,rating,img}) => {
                <h1> {name} </h1>
                <IoHeartCircle className='heart' />
             </div>
+            {
+              type === 'event' ? null :
             <p>${price} starting</p>
+            }
             <div className="star-rating">
             <FaStar className='star' />
             <p>{rating}</p>
