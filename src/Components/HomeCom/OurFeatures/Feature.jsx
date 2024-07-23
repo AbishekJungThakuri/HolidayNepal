@@ -1,41 +1,23 @@
 import React from 'react';
 import './Feature.css';
+import features from '../../../assets/Data/OurFeatures';
 import { SingleBox } from './SingleBox';
-import shine from '../../../assets/images/shines.png';
-import booking from '../../../assets/images/booking.png';
-import destination from '../../../assets/images/destination.png';
-import tasks from '../../../assets/images/tasks.png';
-import best_price from '../../../assets/images/best-price.png';
-import budgeting from '../../../assets/images/budgeting.png';
-
 
 export const Feature = () => {
  
-  let topic1 = 'AI-Generated Travel Itineraries:';
-  let topic2 = 'Seamless Booking Experiences:';
-  let topic3 = 'Real-Time Travel Assistance:';
-  let topic4 = 'Interactive Budget Planner:';
-  let topic5 = 'Exclusive travel Deals:';
-  let topic6 = 'Comprehensive Destination Guides:';
-  let desc1 = 'Get personalized travel plans crafted by advanced AI, trailored to your interests,budget, and schedule, for a unique and unforgettable Nepal experience.';
-  let desc2 = 'Effortlessly book hotels, transportation, and travel packages in one place, with AI-powered recommendations and comparisons for the best options.';
-  let desc3 = 'Access real-time support and travel tips from local experts and AI-driven chatbots to ensure a smooth and enjoyable trip.';
-  let desc4 = 'Utilize our interactive budget planner to manage your expenses, track your spending, and optimize your travel budget for a worry-free journey.';
-  let desc5 = 'Unlock exclusive travel deals and discounts on hotels, tours, and activities, specially curated for HolidayNepal users to make the most of your visit.';
-  let desc6 = 'Explore detailed guides for top destinations in Nepal, featuring must-see attractions, hidden gems, cultural insights, and travel tips to enhance your adventure.';
-
   return (
     <>
     <div className='feature'>
         <h1>Our <span>Features</span></h1>
         <div className="boxes">
-            <SingleBox image={shine} topic={topic1} desc={desc1}/>
-            <SingleBox image={booking} topic={topic2} desc={desc2}/>
-            <SingleBox image={tasks} topic={topic3} desc={desc3}/>
-            <SingleBox image={budgeting} topic={topic4} desc={desc4}/>
-            <SingleBox image={best_price} topic={topic5} desc={desc5}/>
-            <SingleBox image={destination} topic={topic6} desc={desc6}/>
-        </div>
+        {
+            features.map((item,index)=> (
+              <div key={index}>
+                   <SingleBox image={item.image} topic={item.topic} desc={item.desc}/>
+              </div>
+            ))
+        }   
+        </div> 
     </div>
 
     <div className="stats">
