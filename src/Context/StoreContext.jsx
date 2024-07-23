@@ -17,12 +17,12 @@ const StoreContextProvider = (props) => {
   // }, []);
 
 
-  // const contextValue = {
-  //   destinations,
-  //   fetchPlaces,
-  //   places,
-  //   setPlaces,
-  // };
+  const contextValue = {
+    destinations,
+    // fetchPlaces,
+    // places,
+    // setPlaces,
+  };
 
   return (
     <storeContext.Provider value={contextValue}>
