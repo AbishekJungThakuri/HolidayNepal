@@ -1,5 +1,4 @@
 import React from 'react';
-import './Adventure.css'
 import { Category } from '../../Components/Category/Category';
 import adventure_hero from '../../assets/images/adventure-hero-image.jpg'
 
