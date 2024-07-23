@@ -3,38 +3,40 @@
     justify-content: space-between;
     align-items: center;
     height: 90vh;
-    font-size: 1.4rem;
 }
 
 .text p:nth-child(1){
     color:  var(--primary-color);
-    font-weight: 800;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
+    font-weight: 600;
 }
 
 
 .un-line{
     text-decoration: underline var(--primary-color) ;
+    text-decoration-thickness: 3px;
+    font-weight: 600;
 }
 
 .text h1{
-    font-size: 5.5rem;
+    font-size: 5rem;
     font-weight: 600;
-    line-height: 1;
+    line-height: 1.2;
     margin-bottom: 10px;
-    letter-spacing: 0.5rem;
 }
+
   
 .btn{
     width: fit-content;
-    background: linear-gradient(to right, var(--bg-color) 0%, var(--primary-color) 20%); 
+    background: linear-gradient(to right, var(--bg-color) 0%, var(--primary-color) 25%); 
     color: var(--text-color-invert);
-    padding: 5px 20px;
+    padding: 5px 30px;
     border-radius: 50px;
     margin-top: 20px;
     cursor: pointer;
     display: flex;
     align-items: center;
+    font-weight: 600;
 }
 
 .btn .sparkle-icon{

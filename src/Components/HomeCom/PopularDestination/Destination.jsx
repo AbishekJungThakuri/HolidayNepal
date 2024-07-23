@@ -12,10 +12,9 @@ export const Destination = () => {
   return (
     <div className='destination'>
         <h1 className='title' >Popular <span className='underline'>Destinations</span> </h1>
-        <div className='dest-wrapper'>
            <div className='dest-container'>
             {
-                destinations.map((place) => (
+                destinations.filter(place => place.id < 5).map((place) => (
                     <div key={place.id}>
                         <EachPlace name={place.name} img={place.image} rating={place.rating} price={place.price} />
                     </div>
@@ -23,7 +22,6 @@ export const Destination = () => {
             }
           </div>
         <FaCircleArrowRight className='arrow'/>
-        </div>
     </div>
   )
 }

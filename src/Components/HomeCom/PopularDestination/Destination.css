@@ -6,42 +6,52 @@
     justify-content: center;
     width: 80vw;
     border-radius: 50px;
-    padding: 2vw;
-    margin-bottom: 50px;
+    padding: 2vh 0;
+    margin: 50px auto;
+    overflow: hidden;
+    position: relative;
 }
 
 
 .destination .title, .title *{
-    font-size: 3rem;
+    font-size: 2rem;
+    margin: 2vh 0 3vh 3vw;
+    font-weight: 600;
     color: var(--text-color-highlight);
 }
 
-.underline{
-    text-decoration: underline var(--primary-color) ;
-}
 
-.dest-wrapper{
-    display: flex;
-    position: relative;
-    align-items: center;
+.underline{
+    margin-left: 0;
+    text-decoration: underline var(--primary-color);
+    text-decoration-thickness: 3px;
 }
 
 .dest-container{
-    width: 80vw;
-    height: 70vh;
+    position: relative;
+    width: 95%;
+    overflow: hidden;
+    margin: auto;
     overflow-x: scroll; 
-    padding: 5px;
-    display: flex;
-    gap: 20px;
-   
+    overflow-y: hidden;
+    display: grid;
+    grid-auto-flow: column; 
+    grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
+    scrollbar-width: none; 
 }
+
+.dest-container::-webkit-scrollbar {
+    display: none; 
+}
+
+
 
 /* css for Eachplace.jsx */
 
 .each-place{
     margin: 0 5px;
-    width: 17vw;
-    height: 95%;
+    height: 70vh;
+    width: calc(100% - 2rem);
     overflow: hidden;
     cursor: pointer;
 }
@@ -53,12 +63,15 @@
     border-radius: 20px;
     overflow: hidden;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
 .image img{
     height: 100%;
     object-fit: cover;
 }
-
 
 .image .view-more{
     position: absolute;
@@ -73,33 +86,42 @@
     justify-content: center;
     opacity: 0;
 }
+
 .each-place:hover .image .view-more{
     opacity: 1;
 }
 
 
 .info{
-    height: 20%;
     width: 100%;
-    margin-top: 10px;
+    margin: 10px 0;
 }
 
 .info h1{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
     color: var(--text-color-highlight);
 }
-
-.price-rating{
+.info div{
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 80%;
-    font-size: 1.2rem;
 }
-
 
 .star-i{
     fill: var(--star-color);
+    margin:0 2px 0 10px;
 }
 
- 
+.arrow{
+    position: absolute;
+    right: 0.4rem;
+    font-size: 2.5rem;
+    z-index: 1;
+    color: var(--primary-color);
+    fill: var(--primary-color);
+    cursor: pointer;
+}
+
+.arrow:hover{
+    fill: var(--primary-color-hover);
+}

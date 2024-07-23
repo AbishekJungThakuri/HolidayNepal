@@ -11,12 +11,10 @@ export const EachPlace = ({name,price,img,rating}) => {
           <div className='view-more'>View More</div>
         </div>
         <div className="info">
-          <h1> {name} </h1>
-          <div className='price-rating'>
-               <p>${price} starting</p>
-               <p> <FaStar className='star-i' /> {rating}</p>
-          </div>
-        </div>  
+          <div><h1> {name} </h1> <FaStar className='star-i' /> {rating}</div>
+          <p className="categories"> Historic | Natural</p>
+        </div> 
+        
     </div>
   )
 }

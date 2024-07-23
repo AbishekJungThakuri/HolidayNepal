@@ -8,8 +8,7 @@ export const SingleBox = ({image,topic,desc}) => {
           <img className='svg-icon' src={image} alt="" />
           </div>
           <div className='desc'>
-            <h1> {topic} </h1>
-            <p> {desc} </p>
+            <p><span>{topic}</span> {desc} </p>
           </div>
     </div>
   )

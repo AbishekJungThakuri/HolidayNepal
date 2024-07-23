@@ -3,11 +3,29 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Saira Condensed", sans-serif;
+  font-family: "Saira", sans-serif;
+  font-weight: 500;
+  color: var(--text-color);
+  transition: 0.2s ease-in-out;
+  outline:none;
+  text-underline-offset: 0.4rem;
+  scroll-behavior: smooth;
+}
+
+
+:root {
+  --primary-color: #fc8019;
+  --primary-color-hover: #ff7000;
+  --text-color-highlight: #000;
+  --text-color: #4e4e4e;
+  --text-color-invert: #fff;
+  --bg-color: #fff;
+  --bg-color-sec: #eee;
+  --bg-color-ter: #ddd;
+  --star-color: #FDC107;
 }
 
 
 button{
   border: none;
-  outline: none;
-}
+}  

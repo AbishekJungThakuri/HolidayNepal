@@ -1,19 +1,21 @@
 .review{
     background-color: var(--bg-color-sec);
-    padding: 50px 70px;
+    padding: 30px;
     border-radius: 50px;
     margin: 50px 0;
     position: relative;
 }
 .heading h1{
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 600;
     margin-bottom: 30px;
     line-height: 4rem;
     color: var(--text-color-highlight);
 }
 
-.heading h1 span{
+.underline{
+    font-weight: 600;
+    text-decoration-thickness: 3px;
     color: var(--text-color-highlight);
     text-decoration: underline var(--primary-color);
 }
@@ -61,16 +63,18 @@
 .star.fill{
     fill: var(--primary-color);
 }
-
+.star.no-fill{
+    fill: var(--text-color);
+}
 .Desc p{
     max-width: 50vw;
-    font-size: 1.5rem;
-    font-weight: 300;
+    font-weight: 400;
     margin: 20px 0;
 }
 
 .Desc h1{
     color: var(--text-color-highlight);
+    font-size: 1.5rem;
 }
 
 .slider{

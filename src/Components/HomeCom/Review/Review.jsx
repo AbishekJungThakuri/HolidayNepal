@@ -11,7 +11,7 @@ export const Review = () => {
         <div className="review">
             <div className="heading">
                 <h1>
-                    What They Say <span>About Us</span>
+                    What They Say <span  className='underline'>About Us</span>
                 </h1>
             </div>
             <div className="review-container">
@@ -27,7 +27,7 @@ export const Review = () => {
                                 <FaStar className="star fill" />
                                 <FaStar className="star fill" />
                                 <FaStar className="star fill" />
-                                <FaStar className="star" />
+                                <FaStar className="star no-fill" />
                             </div>
                         </div>
                         <div className="Desc">

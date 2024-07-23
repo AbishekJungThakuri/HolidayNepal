@@ -4,25 +4,27 @@
     margin: 50px 0;
     background-color: var(--bg-color-sec);
     border-radius: 50px;
-    padding:50px 70px ;
+    padding:30px ;
 }
 .contact-left h1{
-    font-size: 4rem;
-    line-height: 5rem;
-    margin-bottom: 30px;
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+    font-weight: 600;
+    margin: 30px 0 20px 20px;
     color: var(--text-color-highlight);
 }
 .contact-left p{
-    font-size: 1.5rem;
-    font-weight: 300;
-    max-width: 90%;
+    font-size: 1rem;
+    font-weight: 400;
+    max-width: 80%;
+    margin-left: 20px;
 }
 .contact-right{
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    width: 50vw;
+    width: 60vw;
 }
 
 .contact-right input, .contact-right textarea{
@@ -36,7 +38,7 @@
 }
 .username{
     display: flex;
-    width: 30vw;
+    width: 40vw;
     gap: 1vw;
 }
 .username input{
@@ -44,10 +46,10 @@
     width: 50%;
 }
 .email{
-    width: 30vw;
+    width: 40vw;
 }
 .contact-right textarea{
-    width: 30vw;
+    width: 40vw;
     height: 10vw;
     resize: none;
 }
@@ -57,7 +59,7 @@
     color: var(--text-color-invert);
     border-radius: 25px;
     font-size: 1.2rem;
-    padding: 10px 50px;
+    padding: 5px 50px;
     cursor: pointer;
     background-color: var(--primary-color);
 }
