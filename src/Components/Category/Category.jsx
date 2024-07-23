@@ -4,6 +4,7 @@ import { storeContext } from '../../Context/StoreContext';
 import { Placelayout } from '../PlaceLayoutPages/Placelayout';
 
 export const Category = (props) => {
+
   const { destinations } = useContext(storeContext);
 
   return (
@@ -26,9 +27,9 @@ export const Category = (props) => {
           <option value="popular">Most Popular</option>
           <option value="expensive">Most Expensive</option>
         </select>
-
         <div className="place-list"></div>
       </div>
+
       <div className="places-loadmore">
         <div className="places">
           {destinations.map((place) => ( props.type === place.type ? 
@@ -43,7 +44,9 @@ export const Category = (props) => {
             </div>: null
           ))}
         </div>
-        <button className="load-more">Load more</button>
+      </div>
+      <div className='load-more'>
+        <button className="load-btn">Load more</button>
       </div>
     </div>
   );

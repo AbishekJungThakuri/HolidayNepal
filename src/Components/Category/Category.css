@@ -43,3 +43,36 @@
     background-color: white;
     border: 1px solid black;
 }
+
+
+/* css for Places and m
+loadmore button */
+.places-loadmore{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.places{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.load-more{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.load-btn{
+    width: fit-content;
+    padding:5px 50px;
+    font-size: 20px;
+    font-weight: lighter;
+    border-radius: 30px;
+    border: 1px solid;
+    background-color: white;
+    cursor: pointer;
+}

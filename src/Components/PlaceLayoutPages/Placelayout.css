@@ -51,26 +51,6 @@
     background-color: white;
     border: 1px solid ;
     margin-top: 40px;
-}
-.places-loadmore{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.places{
-    margin-top: 20px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-.load-more{
-    width: fit-content;
-    padding:5px 50px;
-    font-size: 20px;
-    font-weight: lighter;
-    border-radius: 30px;
-    border: 1px solid;
-    background-color: white;
     cursor: pointer;
-    margin-top: 40px;
-    margin-bottom: 100px;
 }
+
