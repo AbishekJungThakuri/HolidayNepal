@@ -7,8 +7,8 @@ export const Placelayout = ({
     id,
     rating,
     img,
-    type,
-    onReadMore
+    category,
+    onReadMore,
 }) => {
     const [isSidebarVisible, setIsSidebarVisible] = useState(false);
 
@@ -25,7 +25,7 @@ export const Placelayout = ({
             <div className="place-info">
                 <div className="top">
                     <h1 className="name"> {name} </h1>
-                    <p>{type.split(",").join(" | ")}</p>
+                    <p>{category.split(",").join(" | ")}</p>
                     <div className="star-rating">
                         <FaStar className="star" />
                         <p>{rating}</p>

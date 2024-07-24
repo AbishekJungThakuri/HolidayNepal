@@ -5,7 +5,7 @@ import package_hero from '../../assets/images/package-hero.jpg'
 export const Packages = () => {
   return (
     <div>
-      <Category type = "P-destination" image={package_hero} Utext = 'Discovered' Ltext='Tailored Adventure Packages' />
+      <Category category = "P-destination" image={package_hero} Utext = 'Discovered' Ltext='Tailored Adventure Packages' />
     </div>
   )
 }
