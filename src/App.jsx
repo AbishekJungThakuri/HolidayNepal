@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom"
+import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom"
 import { Navbar } from "./Components/Navbar/Navbar"
 import { Home } from "./Pages/Home/Home"
 import { Place } from "./Pages/Places/Place"
@@ -8,21 +8,25 @@ import { Event } from "./Pages/Events/Event"
 import { Footer } from "./Components/Footer/Footer"
 
 import './themes.css';
+import { Form } from "./Components/Form/Form"
 
 function App() {
+
+  const location = useLocation();
+  const showNavbarFooter = location.pathname !== '/form';  
+
   return (
     <>
-      <BrowserRouter>
         <Navbar />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/place" element={<Place/>} />
-          <Route path="/activity" element={<Adventure />} />
-          <Route path="/package" element={<Packages />} />
-          <Route path="/event" element={<Event />} />
+           <Route path="/" element={<Home />} />
+           <Route path="/place" element={<Place/>} />
+           <Route path="/adventure" element={<Adventure />} />
+           <Route path="/package" element={<Packages />} />
+           <Route path="/event" element={<Event />} />
+           <Route path="/form" element={<Form/>} />
         </Routes>
-        <Footer />
-      </BrowserRouter>
+      {showNavbarFooter && <Footer />  }
     </>
   );
 }
