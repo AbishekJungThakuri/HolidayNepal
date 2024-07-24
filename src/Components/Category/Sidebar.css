@@ -10,6 +10,7 @@
     border-radius: 20px;
     overflow: hidden;
     margin-bottom: 20px;
+    position: relative;
 }
 
 .sidebar-image img {
@@ -17,6 +18,40 @@
     height: 100%;
     object-fit: cover;
 }
+
+.add-to-fav{
+    width: max-content;
+    background: none;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+}
+
+.add-to-fav *{
+    height: 2rem;
+    width: 2rem;
+    color: var(--primary-color);
+}
+
+.add-to-fav .message{
+    position: absolute;
+    top: 7px;
+    left: calc(2rem + 10px);
+    background-color: var(--text-color);
+    color: var(--text-color-invert);
+    width: max-content;
+    height: max-content;
+    padding: 0 5px;
+    font-weight: 300;
+    font-size: 0.8rem;
+    opacity: 0;
+}
+
+.add-to-fav:hover .message{
+    opacity: 0.8;
+}
+
 
 .sidebar-name {
     font-size: 2rem;
@@ -26,6 +61,7 @@
     text-decoration: underline var(--primary-color);
     text-decoration-thickness: 3px;
 }
+
 
 .type-rating{
     display: flex;

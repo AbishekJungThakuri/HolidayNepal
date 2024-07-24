@@ -12,6 +12,12 @@ let fetchData = async (url) => {
 export const fetchPlaces = async () => {
     return fetchData('http://127.0.0.1:5000/data/places')
 };
+export const fetchActivities = async () => {
+    return fetchData('http://127.0.0.1:5000/data/activities')
+};
+export const fetchEvents = async () => {
+    return fetchData('http://127.0.0.1:5000/data/events')
+};
 
 
 export const fetchCities = async () => {

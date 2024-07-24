@@ -4,7 +4,10 @@ import './Navbar.css';
 import { Link } from 'react-router-dom';
 
 export const Navbar = () => {
-  const [menu, setMenu] = useState('home');
+  
+  let urlKeys = window.location.pathname.split('/')
+  const [menu, setMenu] = useState(urlKeys[urlKeys.length-1]);
+  console.log(menu)
 
   return (
     <div className="nav">
@@ -20,7 +23,7 @@ export const Navbar = () => {
               style={{ textDecoration: 'none' }}
               to="/"
               onClick={() => setMenu('home')}
-              className={menu === 'home' ? 'active' : 'list'}
+              className={menu === 'home' || menu == '' ? 'active' : 'list'}
             >
               Home
             </Link>
@@ -29,8 +32,8 @@ export const Navbar = () => {
             <Link
               style={{ textDecoration: 'none' }}
               to="/place"
-              onClick={() => setMenu('places')}
-              className={menu === 'places' ? 'active' : 'list'}
+              onClick={() => setMenu('place')}
+              className={menu === 'place' ? 'active' : 'list'}
             >
               Places
             </Link>
@@ -38,11 +41,11 @@ export const Navbar = () => {
           <li>
             <Link
               style={{ textDecoration: 'none' }}
-              to="/adventure"
-              onClick={() => setMenu('adventure')}
-              className={menu === 'adventure' ? 'active' : 'list'}
+              to="/activity"
+              onClick={() => setMenu('activity')}
+              className={menu === 'activity' ? 'active' : 'list'}
             >
-              Adventure
+              Activities
             </Link>
           </li>
           <li>
@@ -52,7 +55,7 @@ export const Navbar = () => {
               onClick={() => setMenu('package')}
               className={menu === 'package' ? 'active' : 'list'}
             >
-              Package
+              Packages
             </Link>
           </li>
           <li>

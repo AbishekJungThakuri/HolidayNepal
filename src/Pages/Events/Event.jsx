@@ -5,7 +5,7 @@ import event_hero from '../../assets/images/event-hero.jpg'
 export const Event = () => {
   return (
     <div>
-      <Category category="event" image={event_hero} Utext = 'Vibrant' Ltext='Celebrations of Tradition'/>
+      <Category category="events" image={event_hero} Utext = 'Vibrant' Ltext='Celebrations of Tradition'/>
     </div>
   )
 }

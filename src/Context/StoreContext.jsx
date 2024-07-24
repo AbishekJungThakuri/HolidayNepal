@@ -1,11 +1,14 @@
-import { createContext, useState, useEffect } from 'react';
+import { createContext, useState, useEffect, act } from 'react';
 import destinations from '../assets/Data/populardestination';
-import { fetchPlaces } from '../assets/Data/backend_data';
+import { fetchPlaces, fetchActivities, fetchEvents } from '../assets/Data/backend_data';
 
 export const storeContext = createContext(null);
 
 const StoreContextProvider = (props) => {
   const [allPlaces, setAllPlaces] = useState([]);
+  const [allActivities, setAllActivities] = useState([]);
+  const [allEvents, setAllEvents] = useState([]);
+
   const [categoryPlaces, setCategoryPlaces] = useState({});
   const [count, setCount] = useState({});
   const [error, setError] = useState(null);
@@ -13,30 +16,43 @@ const StoreContextProvider = (props) => {
   // Api fetching
   useEffect(() => {
     const getData = async () => {
-      const data = await fetchPlaces();
-      // console.log(data)
-      if (data) {
-        setAllPlaces(data);
+      const places = await fetchPlaces();
+      const events = await fetchEvents();
+      const activities = await fetchActivities();
+      if (places && activities && places) {
+        // Combine data
+        const combinedData = [
+          ...places.map(item => ({ ...item, category: 'places' })),
+          ...activities.map(item => ({ ...item, category: 'activities' })),
+          ...events.map(item => ({ ...item, category: 'events' }))
+        ];
+
+        // Set states
+        setAllPlaces(places);
+        setAllActivities(activities);
+        setAllEvents(events);
+
+         // Initialize categories and counts
+         const categories = combinedData.reduce((acc, item) => {
+          const category = item.category || 'Uncategorized'; // Default category if not present
+          if (!acc[category]) {
+            acc[category] = [];
+          }
+          acc[category].push(item);
+          return acc;
+        }, {});
+
+        const initialCounts = Object.keys(categories).reduce((acc, category) => {
+          acc[category] = 10;
+          return acc;
+        }, {});
+
+        setCategoryPlaces(categories);
+        setCount(initialCounts);
+
       } else {
-        setError('Failed to fetch places');
+        setError('Failed to fetch data');
       }
-
-    //  Initializing places Category and counts
-    const categories = data.reduce((acc, place) => {
-      if (!acc[place.category]) {
-        acc[place.category] = [];
-      }
-      acc[place.category].push(place);
-      return acc;
-    }, {});
-
-    const initialCounts = Object.keys(categories).reduce((acc, category) => {
-      acc[category] = 10;
-      return acc;
-    }, {});
-
-    setCategoryPlaces(categories);
-    setCount(initialCounts);
   };
     getData();
   }, []);
@@ -64,6 +80,8 @@ const StoreContextProvider = (props) => {
     destinations,
     count,
     allPlaces,
+    allActivities,
+    allEvents,
     handleLoadMore,
     categoryPlaces,
   };

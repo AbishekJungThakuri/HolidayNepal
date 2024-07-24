@@ -6,7 +6,7 @@ import adventure_hero from '../../assets/images/adventure-hero-image.jpg'
 export const Adventure = () => {
   return (
     <div>
-      <Category category="adventure" image={adventure_hero} Utext = 'Embrace' Ltext='The Adventure Expedition' />
+      <Category category="activities" image={adventure_hero} Utext = 'Embrace' Ltext='The Adventure Expedition' />
     </div>
   );
 };
