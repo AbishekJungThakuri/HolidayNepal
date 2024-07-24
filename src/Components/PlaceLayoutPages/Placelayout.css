@@ -1,56 +1,66 @@
-@import url("../../themes.css");
-
 .place-layout{
     display: flex;
-    gap: 15px;
-    padding: 5px 132px;
-    margin-bottom: 15px;
+    margin-bottom: 7vh;
+    height: 25vh;
+    width: 40vw;
+    /* background-color: aqua; */
+    position: relative;
 }
-.place-imag{
-    width: 267px;
-    height: 170px;
+
+.place-image{
+    width: 50%;
+    height: 100%;
     border-radius: 20px;
     overflow: hidden;
+    position: relative;
 }
-.place-imag img{
+
+img{
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-.name-heart{
+
+.place-info{
+    width: 50%;
+    padding: 10px;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: space-between;
-    width: 200px;
 }
-.heart{
-    font-size: 40px;
-    fill: var(--primary-color);
+
+
+.name{
+    font-size: 1.5rem;
+    color: var(--text-color-highlight);
+    font-weight: 600;
+    line-height: 1.6rem;
+    margin-bottom: 5px;
 }
-.name-heart h1{
-   font-size: 25PX;
-   font-weight: 600;
-   color:#5c5c5c ;
-}
-.place-info p{
-    font-size: 20px;
-    color:#5c5c5c ;
-}
+
+
 .star-rating{
     display: flex;
+    margin-top: 10px;
     gap: 10px;
 }
+
 .star{
     font-size: 20px;
     fill: var(--star-color);
 }
 .readmore{
-    font-size: 14px;
-    padding: 0px 10px;
+    width: 100px;
     border-radius: 50px;
-    background-color: white;
-    border: 1px solid ;
-    margin-top: 40px;
+    background-color: var(--bg-color);
+    border: 1px solid;
+    margin: 10px 0;
     cursor: pointer;
+    font-weight: 400;
+}
+
+.readmore:hover{
+    background-color: var(--primary-color);
+    color: var(--text-color-invert);
 }
 

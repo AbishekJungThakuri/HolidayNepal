@@ -1,59 +1,93 @@
-.pamplet-img{
-    height: 402px;
+.pamplet{
+    height: 50vh;
     width: 100%;
     position: relative;
 }
+
+.pamplet-img{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
 .hero{
     height: 100%;
     width: 100%;
     object-fit: cover;
 }
-.pamplet h1{
-    font-size: 55px;
+.pamplet-text{
+    font-size: 3.5rem;
     position: absolute;
-    top: 195px;
-    left: 132px;
+    bottom: 10%;
+    left: 10vw;
     font-weight: bold;
-    line-height: 0.9;
-    letter-spacing: 4px;
+    line-height: 1;
+    color: var(--text-color-invert);
+    text-shadow: 2px 2px 10px #000;
+}
+
+.pamplet-text span{
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-shadow: 2px 2px 2px #000;
 }
 
 
-.sort-places{
-    padding: 5px 132px;
+.heading{
+    text-decoration: underline var(--primary-color);
+    text-decoration-thickness: 3px;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-color-highlight);
+    margin:1vh 0 15px 10vw;
 }
-.sort-places h1{
-    font-size: 40px;
-    font-weight: 600;
-    color: #5c5c5c;
-    margin-bottom: 15px;
+
+.search-places{
+    margin: 1vh 10vw;
 }
-.sort-places p{
-    font-size: 20px;
-    margin-bottom: 5px;
+
+.search-places input{
+    width: 400px;
+    height: 2.5rem;
+    padding: 0 15px;
+    border-radius: 25px 0 0 25px;
+    font-weight: 400;
+    font-size: 1rem;
+    border: 1px solid var(--text-color-highlight);
+    border-right: 0;
+    color: var(--text-color-highlight);
+    vertical-align: middle;
+
 }
-.selectby{
-    width: 267px;
-    height: 41px;
-    border-radius: 20px;
-    border: none;
-    outline: none;
-    font-size: 18px;
-    padding-left: 20px;
-    background-color: white;
-    border: 1px solid black;
+
+
+.search-places button{
+    height: 2.5rem;
+    padding: 2px 20px 0 15px;
+    border: 1px solid var(--text-color-highlight);
+    border-radius: 0 25px 25px 0;
+    border-left: 0;
+    vertical-align: middle;
+    font-size: 1.5rem;
+    background-color: var(--bg-color);
+    cursor: pointer;
+}
+
+.search-places button:hover{
+    background-color: var(--bg-color-sec);
 }
 
 
 /* css for Places and m
 loadmore button */
-.places-loadmore{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+
+
+
 .places{
-    margin-top: 20px;
+    margin:10vh 0 15px 10vw;
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
@@ -62,8 +96,7 @@ loadmore button */
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: 50px;
-    margin-bottom: 100px;
+    margin: 5vh 0;
 }
 
 .load-btn{
