@@ -1,49 +1,92 @@
-import React, { useState } from 'react';
+import React, { useState, useContext, act } from 'react';
 import './Form.css';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
+import { storeContext } from "../../Context/StoreContext";
+import {MultiOptionSelector, SimpleOptionsSelector} from './OptionsInput';
+
 
 export const Form = () => {
   const [date, setDate] = useState('');
   const [day, setDay] = useState('');
   const [budget, setBudget] = useState('');
-  const [exploration, setExploration] = useState([]);
-  const [favActivities, setFavActivities] = useState([]);
+  const [places, setPlaces] = useState([]);
+  const [themes, setTheme] = useState([]);
+  const [activities, setActivities] = useState([]);
   const [accommodation, setAccommodation] = useState('');
   const [foods, setFoods] = useState('');
-  const [newExploration, setNewExploration] = useState([]);
-  const [newFavourite, setNewFavourite] = useState([]);
+
+  const { categoryPlaces, handleLoadMore, count, allPlaces } = useContext(storeContext);
   
-  const exploration_theme = ['Religious', 'Adventure', 'Cultural', 'History', 'Education', 'Wildlife', 'Business'];
-  const fav_Activities = ['Meditation', 'Rafting', 'Trekking', 'Paragliding', 'Boating', 'Camping', 'Budget'];
+  const places_options = categoryPlaces['places']
+  const activities_options = categoryPlaces['activities']
+  const themes_options = [
+    {
+      "name": "Commercial",
+      "image": "https://d3mvlb3hz2g78.cloudfront.net/wp-content/uploads/2018/02/thumb_720_450_Jungledreamstime_l_56902828.jpg"
+    },
+    {
+      "name": "Historic",
+      "image": "https://d3mvlb3hz2g78.cloudfront.net/wp-content/uploads/2018/02/thumb_720_450_Jungledreamstime_l_56902828.jpg"
+    },
+    {
+      "name": "Religious",
+      "image": "https://d3mvlb3hz2g78.cloudfront.net/wp-content/uploads/2018/02/thumb_720_450_Jungledreamstime_l_56902828.jpg"
+    },
+    {
+      "name": "Cultural",
+      "image": "https://d3mvlb3hz2g78.cloudfront.net/wp-content/uploads/2018/02/thumb_720_450_Jungledreamstime_l_56902828.jpg"
+    },
+    {
+      "name": "Natural",
+      "image": "https://d3mvlb3hz2g78.cloudfront.net/wp-content/uploads/2018/02/thumb_720_450_Jungledreamstime_l_56902828.jpg"
+    },
+    {
+      "name": "Wildlife",
+      "image": "https://d3mvlb3hz2g78.cloudfront.net/wp-content/uploads/2018/02/thumb_720_450_Jungledreamstime_l_56902828.jpg"
+    }
+  ];
+  const food_options = [
+    {
+      'name': 'Non-Vegetarian',
+      "image": "https://d3mvlb3hz2g78.cloudfront.net/wp-content/uploads/2018/02/thumb_720_450_Jungledreamstime_l_56902828.jpg"
+    },
+    {
+      'name': 'Vegetarian',
+      "image": "https://d3mvlb3hz2g78.cloudfront.net/wp-content/uploads/2018/02/thumb_720_450_Jungledreamstime_l_56902828.jpg"
+    }
+  ]
+  const accommodation_options = [
+    {
+      'name': 'Simple',
+      "image": "https://d3mvlb3hz2g78.cloudfront.net/wp-content/uploads/2018/02/thumb_720_450_Jungledreamstime_l_56902828.jpg"
+    },
+    {
+      'name': 'Cultural',
+      "image": "https://d3mvlb3hz2g78.cloudfront.net/wp-content/uploads/2018/02/thumb_720_450_Jungledreamstime_l_56902828.jpg"
+    },
+    {
+      'name': 'Luxurious',
+      "image": "https://d3mvlb3hz2g78.cloudfront.net/wp-content/uploads/2018/02/thumb_720_450_Jungledreamstime_l_56902828.jpg"
+    }
+  ]
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
 // form validation
     if (!date || !day || !budget) {
-        alert('Please fill all the Input Fields');
-        return;
-      }
-    if (exploration.length === 0) {
-        alert('Please select at least one Exploration Theme');
+        alert('Please Number of days and your budget');
         return;
     }
-      if (!accommodation) {
-        alert('Please select at least one Accommodation Preference');
-        return;
-      }
-      if (!foods) {
-        alert('Please select at least one Food Preference');
-        return;
-      }
   
     const formData = {
       date,
       day,
       budget,
-      exploration,
-      favActivities,
+      places,
+      themes,
+      activities,
       accommodation,
       foods,
     };
@@ -52,58 +95,11 @@ export const Form = () => {
     setDate('');
     setDay('');
     setBudget('');
-    setExploration([]);
-    setFavActivities([]);
+    setActivities([]);
+    setTheme([]);
+    setPlaces([]);
     setAccommodation('');
     setFoods('');
-  };
-
-
-//   Handling Exploration which are in button
-  const handleExploration = (explo) => {
-    setExploration((prevExploration) => {
-      if (prevExploration.includes(explo)) {
-        return prevExploration.filter((selectedExplo) => selectedExplo !== explo);
-      } else {
-        return [...prevExploration, explo];
-      }
-    });
-  };
-
-
-  //   Handling Favourite which are in button
-  const handleFavourite = (fav) => {
-    setFavActivities((prevfav) => {
-      if (prevfav.includes(fav)) {
-        return prevfav.filter((selectedfav) => selectedfav !== fav);
-      } else {
-        return [...prevfav, fav];
-      }
-    });
-  };
-
-//   Handling Exploration entered in Input field
-  const handleAddExploration = () => {
-    if (newExploration && !exploration.includes(newExploration)) {
-      setExploration([...exploration, newExploration]);
-      setNewExploration('');
-    }
-  };
-
-  //   Handling Favourite entered in Input field
-  const handleAddFavourite = () => {
-    if (newExploration && !exploration.includes(newExploration)) {
-      setExploration([...exploration, newExploration]);
-      setNewExploration('');
-    }
-  };
-
-  const handleAccommodationClick = (value) => {
-    setAccommodation(value);
-  };
-
-  const handleFoodClick = (value) => {
-    setFoods(value);
   };
 
   return (
@@ -116,150 +112,29 @@ export const Form = () => {
 
       {/* Input Field */}
       <div className="input-field">
-        <div className="date-input">
+        <div className="text-input">
           <label htmlFor="">Select dates</label>
           <DatePicker selected={date} onChange={(date) => setDate(date)} />
         </div>
-        <div className="budg-input">
+
+        <div className="text-input">
           <label htmlFor="">Budget</label>
-          <input type="tel" value={day} onChange={(e) => setDay(e.target.value)} />
+          <input required type="tel" value={budget} onChange={(e) => setBudget(e.target.value)} />
         </div>
-        <div className="Nopeople-input">
-          <label htmlFor="">No of people</label>
-          <input type="tel" value={budget} onChange={(e) => setBudget(e.target.value)} />
+
+        <div className="text-input">
+          <label htmlFor="">No of days</label>
+          <input required type="tel" value={day} onChange={(e) => setDay(e.target.value)} />
         </div>
       </div>
 
+      <MultiOptionSelector label_text="Which places you don't want to miss ?" given_options={places_options} onOptionsChange={setPlaces}/>
+      <MultiOptionSelector label_text="What types of places exited you? " given_options={themes_options} onOptionsChange={setTheme}/>
+      <MultiOptionSelector label_text="Are their any activities you want to do in nepaL?" given_options={activities_options} onOptionsChange={setActivities}/>
 
-      {/* Exploration Theme */}
-      <div className="exploration">
-        <label htmlFor="">Exploration Theme</label>
-        <div className="btns">
-          {exploration_theme.map((explor, i) => (
-            <button
-              type="button"
-              key={i}
-              onClick={() => handleExploration(explor)}
-              style={{
-                backgroundColor: exploration.includes(explor) ? 'lightblue' : '',
-              }}
-            >
-              {explor}
-            </button>
-          ))}
-        </div>
-        <div className="add-newExplor">
-           <label htmlFor="">Enter your own Exploration</label>
-           <input
-          type="text"
-          value={newExploration}
-          onChange={(e) => setNewExploration(e.target.value)}
-        />
-        <button type="button" onClick={handleAddExploration}>Add Explor</button>
-        </div>
-      </div>
-
-      {/* Favourite Activities */}
-      <div className="favourite">
-        <label htmlFor="">Favourite Activities</label>
-        <div className="btns">
-          {fav_Activities.map((favor, i) => (
-            <button
-              type="button"
-              key={i}
-              onClick={() => handleFavourite(favor)}
-              style={{
-                backgroundColor: favActivities.includes(favor) ? 'lightblue' : '',
-              }}
-            >
-              {favor}
-            </button>
-          ))}
-        </div>
-        <div className="add-newFavourite">
-           <label htmlFor="">Enter your own favourite </label>
-           <input
-          type="text"
-          value={newFavourite}
-          onChange={(e) => setNewFavourite(e.target.value)}
-        />
-        <button type="button" onClick={handleAddFavourite}>Add Fav</button>
-        </div>
-      </div>
-
-      {/* Accommodation Preference */}
-      <div className="accommodation">
-        <label htmlFor="">Accommodation Preference</label>
-        <div className="btns">
-          <button
-            type="button"
-            value="Simple"
-            onClick={() => handleAccommodationClick('Simple')}
-            style={{
-              backgroundColor: accommodation === 'Simple' ? 'lightblue' : '',
-            }}
-          >
-            Simple
-          </button>
-          <button
-            type="button"
-            value="Luxury"
-            onClick={() => handleAccommodationClick('Luxury')}
-            style={{
-              backgroundColor: accommodation === 'Luxury' ? 'lightblue' : '',
-            }}
-          >
-            Luxury
-          </button>
-          <button
-            type="button"
-            value="Authentic"
-            onClick={() => handleAccommodationClick('Authentic')}
-            style={{
-              backgroundColor: accommodation === 'Authentic' ? 'lightblue' : '',
-            }}
-          >
-            Authentic
-          </button>
-        </div>
-      </div>
-
-      {/* Food Preference */}
-      <div className="food">
-        <label htmlFor="">Food Preference</label>
-        <div className="btns">
-          <button
-            type="button"
-            value="Vegetarian"
-            onClick={() => handleFoodClick('Vegetarian')}
-            style={{
-              backgroundColor: foods === 'Vegetarian' ? 'lightblue' : '',
-            }}
-          >
-            Vegetarian
-          </button>
-          <button
-            type="button"
-            value="Non-Vegetarian"
-            onClick={() => handleFoodClick('Non-Vegetarian')}
-            style={{
-              backgroundColor: foods === 'Non-Vegetarian' ? 'lightblue' : '',
-            }}
-          >
-            Non-Vegetarian
-          </button>
-          <button
-            type="button"
-            value="Vegan"
-            onClick={() => handleFoodClick('Vegan')}
-            style={{
-              backgroundColor: foods === 'Vegan' ? 'lightblue' : '',
-            }}
-          >
-            Vegan
-          </button>
-        </div>
-      </div>
+    
+      <SimpleOptionsSelector label_text="What type of food you prefer?" given_options={food_options} onOptionsChange={setFoods}/>
+      <SimpleOptionsSelector label_text="What type of accommodation you prefer?" given_options={accommodation_options} onOptionsChange={setAccommodation}/>
 
       <button type="submit" className="plan-btn">Plan my trip</button>
     </form>
