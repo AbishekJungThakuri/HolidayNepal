@@ -9,6 +9,7 @@ import { Footer } from "./Components/Footer/Footer"
 
 import './themes.css';
 import { Form } from "./Components/Form/Form"
+import { AiTripComponent } from "./Components/AiTripGenerate/AiTrip/AiTripComponent"
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
            <Route path="/package" element={<Packages />} />
            <Route path="/event" element={<Event />} />
            <Route path="/form" element={<Form/>} />
+           <Route path="/aitrip" element={<AiTripComponent/>}/>
         </Routes>
       {showNavbarFooter && <Footer />  }
     </>
